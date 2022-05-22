@@ -1,22 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import ApiObject from './Components/ApiObject'
+import ApiList from './ApiList'
+import "./app.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Stack } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to Api playground!</h1>
+        <div className="api-list">
+          <Stack className='Api-Routes'>
+            <ApiList list={ApiObject} />
+          </Stack>
+        </div>
       </header>
     </div>
   );
